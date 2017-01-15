@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="google-site-verification" content="lbluN2Ji00svb1JABC8r8FlxxSCUrPYHv8iREj20iDU" />
+	<meta type="description" content="Jacob Richardson is a graduate student in the Geology Department at the University of South Florida who studies volcanoes on Earth and other planets. Research | Curriculum Vitae" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	
+	<title>Lava Flow Simulation :: Jacob Richardson :: USF Geology</title>
+	
+	<style>
+		* { 
+			margin: 0; 
+			padding: 0; 
+		}
+		
+		@font-face {  
+			font-family: "Amble Light";  
+			src: url( /fonts/Amble-Light.eot ); /* IE */  
+			src: local("Amble Light"), url( /fonts/Amble-Light.ttf ) format("truetype"); /* non-IE */  
+		}  
+		
+		@font-face {  
+			font-family: "Amble Bold";  
+			src: url( /fonts/Amble-Bold.eot ); /* IE */  
+			src: local("Amble Bold"), url( /fonts/Amble-Bold.ttf ) format("truetype"); /* non-IE */  
+		}  
+
+		@font-face {  
+			font-family: "Amble";  
+			src: url( /fonts/Amble-Regular.eot ); /* IE */  
+			src: local("Amble Regular"), url( /fonts/Amble-Regular.ttf ) format("truetype"); /* non-IE */  
+		} 
+
+		@font-face {  
+			font-family: "Amble LCI";  
+			src: url( /fonts/Amble-LCI.eot ); /* IE */  
+			src: local("Amble LCI"), url( /fonts/Amble-LCI.ttf ) format("truetype"); /* non-IE */  
+		}  
+		
+		h1 {
+			font: 1.3em/2 "Amble", Courier, Serif; 
+			font-weight:normal;
+		}
+		
+		h2 {
+			font: 1.25em/2 "Amble LCI", Courier, Serif; 
+			font-weight:normal;
+			text-align:center;
+		}
+		
+		a {
+			color:black;
+			font-family: Courier, Serif;
+		}
+
+		img.back-image {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -2;
+		}
+		
+		#page-wrap {
+			width: 545px; 
+			margin: 50px auto; 
+			padding: 20px 30px 20px 5px; 
+			background: white; 
+			-moz-box-shadow: 0 0 20px black; 
+			-webkit-box-shadow: 0 0 20px black; 
+			box-shadow: 0 0 20px black; 
+			overflow:auto;
+		}
+		
+		#leftfloater {
+			position:absolute;
+			margin: 50px 10px; 
+			background: white; 
+			-moz-box-shadow: 0 0 20px black; 
+			-webkit-box-shadow: 0 0 20px black; 
+			box-shadow: 0 0 20px black;  
+			z-index:-1;
+		}
+		
+		p { 
+			font: 15px/1.5 "Amble Light", Courier, Serif; 
+			margin: 0 0 25px 0;  
+		}
+		
+		p.int { 
+			font: 16px/2 Georgia, Times New Roman, Serif; 
+			margin: 0 0 30px 25px;  
+			text-indent:25px;
+		}
+		
+		p.front-page {
+			float:right;
+			width: 270px;
+		}
+		
+		#nav-tree {
+			font: 0.8em Courier, Serif;
+			background: white;
+			border-bottom:1px solid black;
+			-moz-box-shadow: 0 0 10px white; 
+			-webkit-box-shadow: 0 0 10px white; 
+			box-shadow: 0 0 10px white; 
+		}
+		
+		#profile-picture {
+			width:250px;
+			padding-bottom: 20px;
+			text-align:right;
+			border-bottom: 4px double gray;
+			float:left;
+			margin-right:10px;
+			padding-top:10px;
+		}
+		
+		#profile-picture img {
+			width:200px;
+			border:3px ridge gray;
+		}
+		
+		div.insert {
+			text-align:center;
+		}
+	</style>
+	</head>
+
+<body>
+<img class="back-image" src="back.gif" alt="" />
+
+<div id="nav-tree"><a href="http://www.usf.edu">USF</a>
+	&gt; <a href="http://www.cas.usf.edu/">Arts and Science</a>
+	&gt; <a href="http://hennarot.forest.usf.edu/main/depts/geosci/">School of Geosciences</a>
+	&gt; <a href="http://jarichardson.myweb.usf.edu">Home</a>
+	&gt; Hawaiian Lava Flows
+</div>
+
+<div id="leftfloater">
+	<img src="images/lavaflows/hawaii-locator.jpg" alt="The big island of Hawaii" height="220px" width="200px" />
+	<h2>The big island of Hawaii</h2>
+
+</div>
+
+<div id="page-wrap">
+
+	<h1>A Lava Flow Simulation of Pu'u 'O'o</h1><p class="int">Using a very simple lava flow model designed by L. Connor and C. Connor, I erupted lava out of Pu'u 'O'o Volcano, the currently erupting vent within the East Rift of Kilauea, Hawaii.</p>
+
+	<div class="insert"><img src="images/lavaflows/puuoo-flow.jpg" alt="A nice example of a lava flow from Hawaii" height="376px" width="498px" /></div>
+
+	<p class="int">The model relies on topography and simplifies (often poorly quantified) geophysical parameters by replacing them with a "residual thickness." Once this thickness is overcome in any location, it will pass lava on to neighboring locations downhill. Whether this is an oversimplification or not, it makes a remarkably realistic flow!</p>
+	<div class="insert"><img src="images/lavaflows/puuoo-animated.gif" alt="An animated example of a lava flow from Hawaii" height="376px" width="498px" /></div>
+
+
+</div>
+	
+
+</body>
+
+</html>
