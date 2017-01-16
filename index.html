@@ -50,12 +50,12 @@
 		}  
 		
 		h1 {
-			font: 1.6em "Amble", Courier, Sans-Serif; 
+			font: 1.6em "Amble Bold", Courier, Sans-Serif; 
 			padding: em 0 0em;
 		}
 		
 		h2 {
-			font: 1em "Amble Light", Courier, Sans-serif; 
+			font: 1em "Amble", Courier, Sans-serif; 
 			padding: 0 0 1em;
 			font-weight:normal;
 		}
@@ -139,20 +139,6 @@
 			box-shadow: 0 0 10px white; 
 		}
 		
-		#profile-picture {
-			width:250px;
-			padding-bottom: 20px;
-			text-align:right;
-			float:left;
-			margin-right:10px;
-			padding-top:10px;
-		}
-		
-		#profile-picture img {
-			width:200px;
-			border:3px ridge gray;
-		}
-		
 		#pande {
 			float:right;
 			width: 270px;
@@ -184,16 +170,70 @@
 		
 		#content {
 			margin: 0 auto;
-			padding-left: 3em;
-			padding-top: 1em;
+			margin-bottom:3em;
 			-moz-box-shadow: 0 0 50px black; 
 			-webkit-box-shadow: 0 0 50px black; 
 			box-shadow: 0 0 50px black; 
 			width: 90%;
 			
 			background: #fffefd;
+			
+		}
+		#content div {
+			padding: 1em 4em;
 		}
 		
+		#bio {
+			background: #eee;
+			overflow: hidden;
+		}
+		
+		#profile-picture {
+			width:250px;
+			float:left;
+			text-align:center;
+		}
+		
+		#profile-picture img {
+			width:200px;
+			border:3px ridge gray;
+		}
+		
+		#bio-box {
+			margin-left: 300px;
+		}
+		
+		h3 {
+			font: 1.3em/2 "Amble Bold", Courier, Sans-serif; 
+			text-align:center;
+		}
+		
+		#bio-box h3 {
+			text-align:left;
+		}
+		
+		h4 {
+			text-align: center;
+			font: 1.4em "Amble Bold", Courier, Sans-serif; 
+			font-style:italic;
+			background: #fff;
+			padding: 0.2em;
+			border: 1px solid black;
+		}
+		
+		#Publications {
+			background: #99f;
+			overflow: hidden;
+		}
+		
+		#Data {
+			background: #fbb;
+			overflow: hidden;
+		}
+		
+		#footer {
+			text-align:center;
+		}
 	</style>
 	</head>
 
@@ -203,37 +243,49 @@
 			<h2 style="color:white;">Planetary Volcanologist - NASA Goddard Space Flight Center</h2>
 		</div>
 		<div id="head-runner-links">
-			<a class="headlinks" href="#" >CV</a>
-			<a class="headlinks" href="#" >Data</a>
-			<a class="headlinks" href="#" >Publications</a>
-			<a class="headlinks" href="#" >Projects</a>
+			<a class="headlinks" href="#bio" >CV</a>
+			<a class="headlinks" href="#Data" >Data</a>
+			<a class="headlinks" href="#Publications" >Publications</a>
 		</div>
 		
 		<div id="content" >
-		<div id="profile-picture">
-			<a href="images/profile_jacob-richardson.png" title="photo by Anita Marshall!"><img src="images/profile_jacob-richardson_sm.png" alt="Jacob Richardson" /></a>
-		</div>
-		
-		<div id="pubs" >
-	<!--<div id="pande">-->
-		<h2>Projects &amp; Experiments:</h2>
-		<p>&ndash; Aerial LiDAR Survey of the San Rafael, UT Exposed Subsurface Volcanic Features. Data at <a class="front-page-projects" href="http://dx.doi.org/10.5069/G908638S">doi:10.5069/G908638S</a>. Data acquisition and processing completed by the <a class="front-page-projects" href="http://ncalm.org">National Center for Airborne Laser Mapping</a>.</p>
-		<p>&ndash; Graduate Student Co-I on NASA Mars Data Analysis Program Project: "Evaluating the Role of Distributed Volcanism in the Development of the Tharsis Region of Mars."</p>
-		<p>&ndash; A Python Code I wrote to evaluate spherical harmonic coefficients is <a class="front-page-projects" href="https://github.com/jarichardson/sph_harmonics">up on GitHub</a>.</p>
-		<p>&ndash; Developed and taught GLY4045: Planetary Geology, Fall 2013.</p>
-		<p>&ndash; <a class="front-page-projects" href="http://www.cas.usf.edu/blog/costarica/">USF's College of Arts and Science Blog.</a> After a magnitude 7.6 earthquake in Costa Rica, I traveled with another graduate student to the epicenter to track the plate motion using GPS instruments.</p>
-		<p>&ndash; <a class="front-page-projects" href="gel_dike_exp.html">Dike Experiments in Gelatin</a></p>
-		<p>&ndash; <a class="front-page-projects" href="http://shell.cas.usf.edu/geograd/index.html">USF's Geology Graduate Student Org Website</a></p>
-	<!--</div>-->
-	
-	<h2>Publications:</h2>
-	<p>Role of sills in the development of volcanic fields: Insights from lidar mapping surveys of the San Rafael Swell, Utah (2015) Richardson, J.A., Connor, C.B., Wetmore, P.H., Connor, L.J. and Gallant, E.A. <em>Geology</em>, <a href="http://dx.doi.org/10.1130/G37094.1">doi:10.1130/G37094.1</a></p>
-	<p>The Syrtis Major volcano, Mars: A multidisciplinary approach to interpreting its magmatic evolution and structural development (2015) Lillis, R.J., Dufek, J., Kiefer, W.S., Black, B.A., Richardson, J.A. and Bleacher, J.E. <em>Journal of Geophyisical Research</em>, <a href="http://dx.doi.org/10.1002/2014JE004774">doi:10.1002/2014JE004774</a></p>
-	<p>Subsurface structure of a maar-diatreme and associated tuff ring from a high-resolution geophysical survey, Rattlesnake Crater, Arizona (2015) Marshall, A., Connor, C., Kruse, S., Malservisi, R., Richardson, J.A., Courtland, L., Wilson, J. and Karegar, M.A. <em>Journal of Volcanology and Geothermal Research</em>, <a href="http://dx.doi.org/10.1016/j.jvolgeores.2015.09.006">doi:10.1016/j.jvolgeores.2015.09.006</a></p>
-	<p>Multiscale postseismic behavior on a megathrust: The 2012 Nicoya earthquake, Costa Rica (2015) Malservisi, R., Schwartz, S.Y., Voss, N., Protti, M., Gonzalez, V., Dixon, T.H., Jiang, Y., Newman, A.V., Richardson, J.A., Walter, J.I. and Voytenko, D. <em>Geochemistry, Geophysics, Geosystems</em>, <a href="http://dx.doi.org/10.1002/2015GC005794">doi:10.1002/2015GC005794</a></p>
-	<p>The volcanic history of Syria Planum, Mars (2013) Richardson, J.A., Bleacher, J.E. and Glaze, L.S. <em>Journal of Volcanology and Geothermal Research</em>, <a href="http://dx.doi.org/10.1016/j.jvolgeores.2012.11.007">doi:10.1016/j.jvolgeores.2012.11.007</a></p>
-</div>
-</div>
+			<div id="bio">
+				<div id="profile-picture">
+					<a href="images/profile_jacob-richardson.png" title="photo by Anita Marshall!"><img src="images/profile_jacob-richardson_sm.png" alt="Jacob Richardson" /></a>
+				</div>
+				<div id="bio-box">
+					<h4>How do volcanic terrains and magmatic processes evolve over geologic time?</h4>
+					<h3>Bio</h3>
+					<p>Jacob Richardson is a volcanologist.<p>
+					
+				</div>
+			</div>
+
+			<div id="Publications">
+				<h3>Publications</h3>
+				<p>Role of sills in the development of volcanic fields: Insights from lidar mapping surveys of the San Rafael Swell, Utah (2015) Richardson, J.A., Connor, C.B., Wetmore, P.H., Connor, L.J. and Gallant, E.A. <em>Geology</em>, <a href="http://dx.doi.org/10.1130/G37094.1">doi:10.1130/G37094.1</a></p>
+				<p>The Syrtis Major volcano, Mars: A multidisciplinary approach to interpreting its magmatic evolution and structural development (2015) Lillis, R.J., Dufek, J., Kiefer, W.S., Black, B.A., Richardson, J.A. and Bleacher, J.E. <em>Journal of Geophyisical Research</em>, <a href="http://dx.doi.org/10.1002/2014JE004774">doi:10.1002/2014JE004774</a></p>
+				<p>Subsurface structure of a maar-diatreme and associated tuff ring from a high-resolution geophysical survey, Rattlesnake Crater, Arizona (2015) Marshall, A., Connor, C., Kruse, S., Malservisi, R., Richardson, J.A., Courtland, L., Wilson, J. and Karegar, M.A. <em>Journal of Volcanology and Geothermal Research</em>, <a href="http://dx.doi.org/10.1016/j.jvolgeores.2015.09.006">doi:10.1016/j.jvolgeores.2015.09.006</a></p>
+				<p>Multiscale postseismic behavior on a megathrust: The 2012 Nicoya earthquake, Costa Rica (2015) Malservisi, R., Schwartz, S.Y., Voss, N., Protti, M., Gonzalez, V., Dixon, T.H., Jiang, Y., Newman, A.V., Richardson, J.A., Walter, J.I. and Voytenko, D. <em>Geochemistry, Geophysics, Geosystems</em>, <a href="http://dx.doi.org/10.1002/2015GC005794">doi:10.1002/2015GC005794</a></p>
+				<p>The volcanic history of Syria Planum, Mars (2013) Richardson, J.A., Bleacher, J.E. and Glaze, L.S. <em>Journal of Volcanology and Geothermal Research</em>, <a href="http://dx.doi.org/10.1016/j.jvolgeores.2012.11.007">doi:10.1016/j.jvolgeores.2012.11.007</a></p>
+				
+			</div>
+			
+			<div id="Data">
+			<h3>Data &amp Models</h3>
+			
+			
+				<p>&ndash; Aerial LiDAR Survey of the San Rafael, UT Exposed Subsurface Volcanic Features. Data at <a class="front-page-projects" href="http://dx.doi.org/10.5069/G908638S">doi:10.5069/G908638S</a>. Data acquisition and processing completed by the <a class="front-page-projects" href="http://ncalm.org">National Center for Airborne Laser Mapping</a>.</p>
+				<p>&ndash; Graduate Student Co-I on NASA Mars Data Analysis Program Project: "Evaluating the Role of Distributed Volcanism in the Development of the Tharsis Region of Mars."</p>
+				<p>&ndash; A Python Code I wrote to evaluate spherical harmonic coefficients is <a class="front-page-projects" href="https://github.com/jarichardson/sph_harmonics">up on GitHub</a>.</p>
+				<p>&ndash; Developed and taught GLY4045: Planetary Geology, Fall 2013.</p>
+				<p>&ndash; <a class="front-page-projects" href="http://www.cas.usf.edu/blog/costarica/">USF's College of Arts and Science Blog.</a> After a magnitude 7.6 earthquake in Costa Rica, I traveled with another graduate student to the epicenter to track the plate motion using GPS instruments.</p>
+				<p>&ndash; <a class="front-page-projects" href="gel_dike_exp.html">Dike Experiments in Gelatin</a></p>
+			</div>
+			
+			<div id="footer">
+				<p>Created and copyright 2017 by Jacob</p>
+			</div>
 		
 		
 	
