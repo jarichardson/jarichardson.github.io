@@ -29,6 +29,15 @@
             mapTypeIds: ['moon']
           }
         });
+        
+        
+        
+        map.data.loadGeoJson('json/google.json');
+						
+				map.data.setStyle({
+					fillColor: 'red',
+					strokeWeight: 2
+				});
 
         var moonMapType = new google.maps.ImageMapType({
           getTileUrl: function(coord, zoom) {
@@ -73,13 +82,6 @@
         }
 
         return {x: x, y: y};
-        
-        map.data.loadGeoJson('json/google.json');
-						
-				map.data.setStyle({
-					fillColor: 'red',
-					strokeWeight: 2
-				});
       }
     </script>
     <script async defer
