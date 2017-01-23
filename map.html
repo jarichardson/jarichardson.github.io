@@ -5,9 +5,9 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMap">
     </script>
     
-    <script type="text/javascript" src="javascript/marsmap.js"></script>
-    <script type="text/javascript" src="javascript/scalebar.js"></script>
-    <script type="text/javascript" src="javascript/main.js"></script>
+<!--    <script type="text/javascript" src="javascript/marsmap.js"></script>-->
+<!--    <script type="text/javascript" src="javascript/scalebar.js"></script>-->
+<!--    <script type="text/javascript" src="javascript/main.js"></script>-->
     <script> /*
         gMap.data.loadGeoJson('json/google.json');
 						
@@ -15,6 +15,8 @@
 					fillColor: 'red',
 					strokeWeight: 2
 				});*/
+				
+				document.getElementById('map').innerHTML += '<br>Some new content!';
 		</script>
 
 
@@ -23,7 +25,10 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+      	border: 5px solid orange;
+      	margin: 1em auto;
+        height: 80%;
+        width:90%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -102,6 +107,6 @@
     </script>
   </head>
   <body>
-    <div id="map"></div>
+    <div id='map'>initial content</div>
   </body>
 </html>
