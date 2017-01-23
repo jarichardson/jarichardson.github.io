@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMap">
-    </script>
     
-<!--    <script type="text/javascript" src="javascript/marsmap.js"></script>-->
-<!--    <script type="text/javascript" src="javascript/scalebar.js"></script>-->
-<!--    <script type="text/javascript" src="javascript/main.js"></script>-->
-    <script> /*
-        gMap.data.loadGeoJson('json/google.json');
-						
-				gMap.data.setStyle({
-					fillColor: 'red',
-					strokeWeight: 2
-				});*/
-				
-				document.getElementById('map').innerHTML += '<br>Some new content!';
-		</script>
+    <script type="text/javascript" src="js/marsmap.js"></script>
+    <script type="text/javascript" src="js/scalebar.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
 
 
     <title>Image map types</title>
@@ -107,6 +95,18 @@
     </script>
   </head>
   <body>
-    <div id='map'>initial content</div>
+    <div id='map'></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMap">
+    </script>
+
+<script> /*
+        gMap.data.loadGeoJson('json/google.json');
+						
+				gMap.data.setStyle({
+					fillColor: 'red',
+					strokeWeight: 2
+				});*/
+		</script>
   </body>
 </html>
