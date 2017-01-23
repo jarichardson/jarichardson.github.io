@@ -52,7 +52,7 @@
               }
               var bound = Math.pow(2, zoom);
               //return '//mw1.google.com/mw-planetary/lunar/lunarmaps_v1/clem_bw' +
-              return '//mw1.google.com/mw-planetary/mars/elevation' +
+              return 'https://mw1.google.com/mw-planetary/mars/elevation' +
                   '/' + zoom + '/' + normalizedCoord.x + '/' +
                   (bound - normalizedCoord.y - 1) + '.jpg';
           },
@@ -60,7 +60,7 @@
           maxZoom: 9,
           minZoom: 0,
           radius: 1738000,
-          name: 'Moon'
+          name: 'Mars'
         });
 
         map.mapTypes.set('moon', moonMapType);
