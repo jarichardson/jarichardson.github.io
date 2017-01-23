@@ -1,15 +1,16 @@
 var map;
-function initMaper() {
-	map = new google.maps.Map(document.getElementById('map'), {
+function initMapEarth() {
+	mapE = new google.maps.Map(document.getElementById('mapEarth'), {
 		center: {lat: 39, lng: -75},
-		zoom: 2
+		zoom: 2,
+	  minZoom: 1
 	});
 	
 	
 	
-	map.data.loadGeoJson('json/google.json');
+	mapE.data.loadGeoJson('json/google.json');
 	
-	map.data.setStyle({
+	mapE.data.setStyle({
 		fillColor: 'red',
 		strokeWeight: 2
 	});

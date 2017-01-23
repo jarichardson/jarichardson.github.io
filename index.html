@@ -10,8 +10,21 @@
 	
 	
 	<script src="js/simple_map.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMaper"
-		async defer></script>
+	<script type="text/javascript" src="js/marsmap.js"></script>
+	
+	<script>
+		function bothMaps() {
+			initMapEarth();
+			initMapMars();
+		}
+	</script>
+	<script 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=bothMaps"
+	async defer></script>
+	
+	<script 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMapMars"
+	async defer></script>
 	
 	<style>
 		body {
@@ -217,11 +230,19 @@
 		}
 		
 		
-		#map {
-			height: 20em;
+		#mapEarth {
+			margin-bottom:1em;
+			height: 30em;
 			width: 90%;
 			border: 0.3em groove #a53;
 		}
+		
+		#mapMars {
+			height: 30em;
+			width: 90%;
+			border: 0.3em groove #a53;
+		}
+		
 	</style>
 	</head>
 
@@ -232,7 +253,7 @@
 		</div>
 		<div id="head-runner-links">
 			<a class="headlinks" href="#bio" >CV</a>
-			<a class="headlinks" href="map.html" >Data</a>
+			<a class="headlinks" href="#Data" >Data</a>
 			<a class="headlinks" href="#Publications" >Publications</a>
 		</div>
 		
@@ -252,7 +273,8 @@
 		<div id="Data">
 			<h3>Data &amp Models</h3>
 			
-			<div id="map"></div>
+			<div id="mapEarth"></div>
+			<div id="mapMars"></div>
 			
 				<p>&ndash; Aerial LiDAR Survey of the San Rafael, UT Exposed Subsurface Volcanic Features. Data at <a class="front-page-projects" href="http://dx.doi.org/10.5069/G908638S">doi:10.5069/G908638S</a>. Data acquisition and processing completed by the <a class="front-page-projects" href="http://ncalm.org">National Center for Airborne Laser Mapping</a>.</p>
 				<p>&ndash; Graduate Student Co-I on NASA Mars Data Analysis Program Project: "Evaluating the Role of Distributed Volcanism in the Development of the Tharsis Region of Mars."</p>

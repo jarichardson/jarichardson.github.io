@@ -2,19 +2,32 @@
 <html>
   <head>
     
-<!--    <script type="text/javascript" src="js/marsmap.js"></script>-->
-    <script type="text/javascript" src="js/simple_map_mars.js"></script>
+    <script type="text/javascript" src="js/marsmap.js"></script>
+<!--    <script type="text/javascript" src="js/simple_map_mars.js"></script>-->
 <!--    <script type="text/javascript" src="js/scalebar.js"></script>-->
 <!--    <script type="text/javascript" src="js/main.js"></script>-->
 
-
+        
+			<script>
+				function loadGData() {
+        map.data.loadGeoJson('json/google.json');
+						
+				map.data.setStyle({
+					fillColor: 'red',
+					strokeWeight: 2
+				});
+				}
+			</script>
 
     <title>Image map types</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-				height: 100%;
+      #mapMars {
+				height: 80%;
+				width: 80%;
+				border: 5px solid orange;
+				margin: 5em auto;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -24,78 +37,14 @@
       }
     </style>
     
-    <script>
-      function initMapL() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 0, lng: 0},
-          zoom: 1,
-          streetViewControl: false,
-          mapTypeControlOptions: {
-            mapTypeIds: ['moon']
-          }
-        });
-        
-        
-        
-        map.data.loadGeoJson('json/google.json');
-						
-				map.data.setStyle({
-					fillColor: 'red',
-					strokeWeight: 2
-				});
-
-        var moonMapType = new google.maps.ImageMapType({
-          getTileUrl: function(coord, zoom) {
-              var normalizedCoord = getNormalizedCoord(coord, zoom);
-              if (!normalizedCoord) {
-                return null;
-              }
-              var bound = Math.pow(2, zoom);
-              //return '//mw1.google.com/mw-planetary/lunar/lunarmaps_v1/clem_bw' +
-              return 'https://mw1.google.com/mw-planetary/mars/elevation' +
-                  '/' + zoom + '/' + normalizedCoord.x + '/' +
-                  (bound - normalizedCoord.y - 1) + '.jpg';
-          },
-          tileSize: new google.maps.Size(256, 256),
-          maxZoom: 9,
-          minZoom: 0,
-          radius: 1738000,
-          name: 'Mars'
-        });
-
-        map.mapTypes.set('moon', moonMapType);
-        map.setMapTypeId('moon');
-      }
-
-      // Normalizes the coords that tiles repeat across the x axis (horizontally)
-      // like the standard Google map tiles.
-      function getNormalizedCoord(coord, zoom) {
-        var y = coord.y;
-        var x = coord.x;
-
-        // tile range in one direction range is dependent on zoom level
-        // 0 = 1 tile, 1 = 2 tiles, 2 = 4 tiles, 3 = 8 tiles, etc
-        var tileRange = 1 << zoom;
-
-        // don't repeat across y-axis (vertically)
-        if (y < 0 || y >= tileRange) {
-          return null;
-        }
-
-        // repeat across x-axis
-        if (x < 0 || x >= tileRange) {
-          x = (x % tileRange + tileRange) % tileRange;
-        }
-
-        return {x: x, y: y};
-      }
-    </script>
+    
   </head>
   <body>
-    <div id='map'></div>
+    <div id='mapMars'></div>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMapL">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMapMars">
     </script>
+    <script>loadGData()</script>
 
 <script> /*
         gMap.data.loadGeoJson('json/google.json');
