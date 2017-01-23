@@ -13,7 +13,7 @@
  * @param {Element} copyrightElem The element for copyright text.
  */
 function addMarsMapTypes(map, captionElem, copyrightElem) {
-  var mapsServer = 'mw1.google.com/mw-planetary/mars/';
+  var mapsServer = '//mw1.google.com/mw-planetary/mars/';
   var maps = {
     elevation: {
       location: mapsServer + 'elevation',
