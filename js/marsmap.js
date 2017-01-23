@@ -2,9 +2,10 @@
 //// With thanks to mars.google.com
 ////
 
+var mapM;
 
 function initMapMars() {
-  var mapM = new google.maps.Map(document.getElementById('mapMars'), {
+  mapM = new google.maps.Map(document.getElementById('mapMars'), {
     center: {lat: 0, lng: 0},
     zoom: 2,
     streetViewControl: false,
