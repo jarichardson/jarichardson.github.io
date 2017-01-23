@@ -5,7 +5,7 @@ var gSidebar;               // a search results handler
 
 
 function initMap() {
-// These are our default configuration options.  They can be
+  // These are our default configuration options.  They can be
   // overridden by parameters in the URL.
   if (!gConfig) {
     gConfig = new Config(window.location.hash.substring(1),
