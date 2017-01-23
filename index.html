@@ -8,6 +8,11 @@
 	
 	<title>Jacob Richardson :: Scientist Profile</title>
 	
+	
+	<script src="js/simple_map.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMaper"
+		async defer></script>
+	
 	<style>
 		body {
 			background-color: #ffee;
@@ -214,7 +219,7 @@
 		
 		#map {
 			height: 20em;
-			width: 50%;
+			width: 90%;
 			border: 0.3em groove #a53;
 		}
 	</style>
@@ -248,26 +253,6 @@
 			<h3>Data &amp Models</h3>
 			
 			<div id="map"></div>
-				<script>
-					var map;
-					function initMap() {
-						map = new google.maps.Map(document.getElementById('map'), {
-							center: {lat: 39, lng: -75},
-							zoom: 2
-						});
-						
-						
-						
-						map.data.loadGeoJson('json/google.json');
-						
-						map.data.setStyle({
-							fillColor: 'red',
-							strokeWeight: 2
-						});
-					}
-				</script>
-				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDnehOeTxSh_b_xS1NqZYYosqumcHX-lQ&callback=initMap"
-				async defer></script>
 			
 				<p>&ndash; Aerial LiDAR Survey of the San Rafael, UT Exposed Subsurface Volcanic Features. Data at <a class="front-page-projects" href="http://dx.doi.org/10.5069/G908638S">doi:10.5069/G908638S</a>. Data acquisition and processing completed by the <a class="front-page-projects" href="http://ncalm.org">National Center for Airborne Laser Mapping</a>.</p>
 				<p>&ndash; Graduate Student Co-I on NASA Mars Data Analysis Program Project: "Evaluating the Role of Distributed Volcanism in the Development of the Tharsis Region of Mars."</p>
