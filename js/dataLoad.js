@@ -65,52 +65,23 @@ var features = [
   	//Iceland LiDAR Data
     position: new google.maps.LatLng(64.9064, -16.7796),
     type: 'data'
-  }, /* {
-    position: new google.maps.LatLng(-33.91725, 151.23011),
-    type: 'data'
   }, {
-    position: new google.maps.LatLng(-33.91872, 151.23089),
-    type: 'data'
-  }, {
-    position: new google.maps.LatLng(-33.91784, 151.23094),
-    type: 'data'
-  }, {
-    position: new google.maps.LatLng(-33.91682, 151.23149),
-    type: 'data'
-  }, {
-    position: new google.maps.LatLng(-33.91790, 151.23463),
-    type: 'data'
-  }, {
-    position: new google.maps.LatLng(-33.91666, 151.23468),
-    type: 'data'
-  }, {
-    position: new google.maps.LatLng(-33.916988, 151.233640),
-    type: 'data'
-  }, {
-    position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-    type: 'conference'
-  }, {
-    position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+  	//Earthquake paper
+    position: new google.maps.LatLng(10.1446, -85.4530),
     type: 'paper'
-  }*/
+  }, {
+  	//San Raf Data
+  	position: new google.maps.LatLng(38.7455, -111.0718),
+  	type: 'data'
+  }, {
+  	//San Raf Paper
+  	position: new google.maps.LatLng(38.6083, -111.1597),
+  	type: 'paper'
+  }, {
+  	//nevado del ruiz abstract
+  	position: new google.maps.LatLng(4.8920, -75.3188),
+  	type: 'conference'
+  }
 ];
 
 for (var i = 0, feature; feature = features[i]; i++) {

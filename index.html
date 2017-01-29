@@ -10,6 +10,7 @@
 	
 	
 	<script src="js/dataLoad.js"></script>
+	<script src="js/dataLoad_mars.js"></script>
 	<script src="js/simple_map.js"></script>
 	<script type="text/javascript" src="js/marsmap.js"></script>
 	
@@ -18,6 +19,7 @@
 			initMapMars();
 			initMapEarth();
 			dataLoad();
+			dataLoadM();
 		}
 	</script>
 	<script 
@@ -201,6 +203,11 @@
 		}
 		
 		h4 {
+			font: 1.3em/2 "Amble LCI", Courier, Sans-serif; 
+			text-align:center;
+		}
+		
+		h5 {
 			text-align: center;
 			font: 1.4em "Amble Bold", Courier, Sans-serif; 
 			font-style:italic;
@@ -237,6 +244,51 @@
 			border: 0.3em groove #a53;
 		}
 		
+		#publist {
+			width: 90%;
+			margin: 0;
+			padding: 0;
+			background: #fdfdfd;
+			border: 0.3em ridge #a53;
+		}
+		
+		.publist {
+			border-bottom: 1px solid #ddd;
+			width: 90%;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.publist p {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+		
+		p.pub-title {
+			font: 1.1em "Amble Bold", Courier, Sans-serif; 
+		}
+		
+		p.pub-author {
+			font: 1em "Amble", Courier, Sans-serif; 
+			clear: right;
+		}
+		
+		
+		span.pub-year {
+			font: 0.9em "Amble LCI", Courier, Sans-serif; 
+		}
+		
+		span.pub-doi {
+			float:right;
+			font: 1em/2 "Amble", Courier, Sans-serif; 
+		}
+		
+		span.pub-journal {
+			font: 1em/2 "Amble LCI", Courier, Sans-serif; 
+			margin-right: 0.5em;
+		}
+		
 	</style>
 	</head>
 
@@ -257,7 +309,7 @@
 					<a href="images/profile_jacob-richardson.png" title="photo credit: Anita Marshall"><img src="images/profile_jacob-richardson_sm.png" alt="Image of Jacob Richardson" /></a>
 				</div>
 				<div id="bio-box">
-					<h4>How do volcanic terrains and magmatic processes evolve over geologic time?</h4>
+					<h5>How do volcanic terrains and magmatic processes evolve over geologic time?</h5>
 					<h3>Bio</h3>
 					<p>Jacob Richardson is a volcanologist.<p>
 					
@@ -265,27 +317,96 @@
 			</div>
 			
 		<div id="Data">
-			<h3>Data &amp Models</h3>
-			
+			<h3>Publications &amp; Data</h3>
+			<h4>Earth</h4>
 			<div id="mapEarth" class="datamap"></div>
+			<h4>Mars</h4>
 			<div id="mapMars" class="datamap"></div>
 			
+			<h4>Peer-reviewed Publications</h4>
+			
+			<div id="publist">
+				<!--<div class="publist">
+					<p class="pub-title"></p>
+					<span class="pub-journal"></span>
+					<span class="pub-year"></span>
+					<span class="pub-doi"><a href=""></a></span>
+					<p class="pub-author"><strong>Richardson, J.A.</strong></p>
+				</div>-->
+				
+				<div class="publist">
+					<p class="pub-title">Recurrence rate and magma effusion rate for the latest volcanism on Arsia Mons, Mars</p>
+					<span class="pub-journal">Earth and Planetary Science Letters</span>
+					<span class="pub-year">2017</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1016/j.epsl.2016.10.040">doi:10.1016/j.epsl.2016.10.040</a></span>
+					<p class="pub-author"><strong>Richardson, J.A.</strong>, Wilson, J.A., Connor, C.B., Bleacher, J.E., and Kiyosugi, K.</p>
+				</div>
+				
+				<div class="publist">
+					<p class="pub-title">Lava flow mapping and volume calculations for the 2012–2013 Tolbachik, Kamchatka, fissure eruption using bistatic TanDEM-X InSAR</p>
+					<span class="pub-journal">Bulletin of Volcanology</span>
+					<span class="pub-year">2015</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1007/s00445-015-0989-9">doi:10.1007/s00445-015-0989-9</a></span>
+					<p class="pub-author">Kubanek, J., <strong>Richardson, J.A.</strong>, Charbonnier, S. J., and Connor, L. J.</p>
+				</div>
+				
+				<div class="publist">
+					<p class="pub-title">Role of sills in the development of volcanic fields: Insights from lidar mapping surveys of the San Rafael Swell, Utah </p>
+					<span class="pub-journal">Geology</span>
+					<span class="pub-year">2015</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1130/G37094.1">doi:10.1130/G37094.1</a></span>
+					<p class="pub-author"><strong>Richardson, J.A.</strong>, Connor, C.B., Wetmore, P.H., Connor, L.J., and Gallant, E.A.</p>
+				</div>
+				
+				<div class="publist">
+					<p class="pub-title">The Syrtis Major volcano, Mars: A multidisciplinary approach to interpreting its magmatic evolution and structural development</p>
+					<span class="pub-journal">Journal of Geophysical Research: Planets</span>
+					<span class="pub-year">2015</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1002/2014JE004774">doi:10.1002/2014JE004774</a></span>
+					<p class="pub-author"> Lillis, R.J., Dufek, J., Kiefer, W.S., Black, B.A., <strong>Richardson, J.A.</strong>, and Bleacher, J.E.</p>
+				</div>
+				
+				<div class="publist">
+					<p class="pub-title">Subsurface structure of a maar-diatreme and associated tuff ring from a high-resolution geophysical survey, Rattlesnake Crater, Arizona</p>
+					<span class="pub-journal">Journal of Volcanology and Geothermal Research</span>
+					<span class="pub-year">2015</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1016/j.jvolgeores.2015.09.006">doi:10.1016/j.jvolgeores.2015.09.006</a></span>
+					<p class="pub-author"> Marshall, A., Connor, C., Kruse, S., Malservisi, R., <strong>Richardson, J.A.</strong>, Courtland, L., Wilson, J., and Karegar, M.A.</p>
+				</div>
+				
+				<div class="publist">
+					<p class="pub-title">Multiscale postseismic behavior on a megathrust: The 2012 Nicoya earthquake, Costa Rica</p>
+					<span class="pub-journal">Geochemistry, Geophysics, Geosystems</span>
+					<span class="pub-year">2015</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1002/2015GC005794">doi:10.1002/2015GC005794</a></span>
+					<p class="pub-author"> Malservisi, R., Schwartz, S.Y., Voss, N., Protti, M., Gonzalez, V., Dixon, T.H., Jiang, Y., Newman, A.V., <strong>Richardson, J.A.</strong>, Walter, J.I., and Voytenko, D.</p>
+				</div>
+				
+				<div class="publist">
+					<p class="pub-title">The volcanic history of Syria Planum, Mars</p>
+					<span class="pub-journal">Journal of Volcanology and Geothermal Research</span>
+					<span class="pub-year">2013</span>
+					<span class="pub-doi"><a href="http://dx.doi.org/10.1016/j.jvolgeores.2012.11.007">doi:10.1016/j.jvolgeores.2012.11.007</a></span>
+					<p class="pub-author"> <strong>Richardson, J.A.</strong>, Bleacher, J.E., and Glaze, L.S.</p>
+				</div>
+			</div>
+				
+				
+				<h4>Data and Projects</h4>
 				<p>&ndash; Aerial LiDAR Survey of the San Rafael, UT Exposed Subsurface Volcanic Features. Data at <a class="front-page-projects" href="http://dx.doi.org/10.5069/G908638S">doi:10.5069/G908638S</a>. Data acquisition and processing completed by the <a class="front-page-projects" href="http://ncalm.org">National Center for Airborne Laser Mapping</a>.</p>
-				<p>&ndash; Graduate Student Co-I on NASA Mars Data Analysis Program Project: "Evaluating the Role of Distributed Volcanism in the Development of the Tharsis Region of Mars."</p>
+				<!--<p>&ndash; Graduate Student Co-I on NASA Mars Data Analysis Program Project: "Evaluating the Role of Distributed Volcanism in the Development of the Tharsis Region of Mars."</p>
 				<p>&ndash; A Python Code I wrote to evaluate spherical harmonic coefficients is <a class="front-page-projects" href="https://github.com/jarichardson/sph_harmonics">up on GitHub</a>.</p>
 				<p>&ndash; Developed and taught GLY4045: Planetary Geology, Fall 2013.</p>
 				<p>&ndash; <a class="front-page-projects" href="http://www.cas.usf.edu/blog/costarica/">USF's College of Arts and Science Blog.</a> After a magnitude 7.6 earthquake in Costa Rica, I traveled with another graduate student to the epicenter to track the plate motion using GPS instruments.</p>
 				<p>&ndash; <a class="front-page-projects" href="gel_dike_exp.html">Dike Experiments in Gelatin</a></p>
+				-->
 			</div>
 			
 			
 			<div id="Publications">
-				<h3>Publications</h3>
-				<p>Role of sills in the development of volcanic fields: Insights from lidar mapping surveys of the San Rafael Swell, Utah (2015) Richardson, J.A., Connor, C.B., Wetmore, P.H., Connor, L.J. and Gallant, E.A. <em>Geology</em>, <a href="http://dx.doi.org/10.1130/G37094.1">doi:10.1130/G37094.1</a></p>
-				<p>The Syrtis Major volcano, Mars: A multidisciplinary approach to interpreting its magmatic evolution and structural development (2015) Lillis, R.J., Dufek, J., Kiefer, W.S., Black, B.A., Richardson, J.A. and Bleacher, J.E. <em>Journal of Geophyisical Research</em>, <a href="http://dx.doi.org/10.1002/2014JE004774">doi:10.1002/2014JE004774</a></p>
-				<p>Subsurface structure of a maar-diatreme and associated tuff ring from a high-resolution geophysical survey, Rattlesnake Crater, Arizona (2015) Marshall, A., Connor, C., Kruse, S., Malservisi, R., Richardson, J.A., Courtland, L., Wilson, J. and Karegar, M.A. <em>Journal of Volcanology and Geothermal Research</em>, <a href="http://dx.doi.org/10.1016/j.jvolgeores.2015.09.006">doi:10.1016/j.jvolgeores.2015.09.006</a></p>
-				<p>Multiscale postseismic behavior on a megathrust: The 2012 Nicoya earthquake, Costa Rica (2015) Malservisi, R., Schwartz, S.Y., Voss, N., Protti, M., Gonzalez, V., Dixon, T.H., Jiang, Y., Newman, A.V., Richardson, J.A., Walter, J.I. and Voytenko, D. <em>Geochemistry, Geophysics, Geosystems</em>, <a href="http://dx.doi.org/10.1002/2015GC005794">doi:10.1002/2015GC005794</a></p>
-				<p>The volcanic history of Syria Planum, Mars (2013) Richardson, J.A., Bleacher, J.E. and Glaze, L.S. <em>Journal of Volcanology and Geothermal Research</em>, <a href="http://dx.doi.org/10.1016/j.jvolgeores.2012.11.007">doi:10.1016/j.jvolgeores.2012.11.007</a></p>
+				<h3>Models</h3>
+				<p>&ndash; MOLASSES is a Cellular Automata lava flow simulator: <a class="front-page-projects" href="https://github.com/jarichardson/molasses">GitHub link</a>.</p>
+				<p>&ndash; A Python Code to evaluate spherical harmonic coefficients is <a class="front-page-projects" href="https://github.com/jarichardson/sph_harmonics">up on GitHub</a>.</p>
 				
 			</div>
 			
