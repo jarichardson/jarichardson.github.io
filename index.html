@@ -12,6 +12,7 @@
 	<script src="js/dataLoad.js"></script>
 	<script src="js/dataLoad_mars.js"></script>
 	<script src="js/simple_map.js"></script>
+	<script src="js/logo.js"></script>
 	<script type="text/javascript" src="js/marsmap.js"></script>
 	
 	<script>
@@ -69,12 +70,12 @@
 		}  
 		
 		h1 {
-			font: 1.6em "Amble Bold", Courier, Sans-Serif; 
-			padding: em 0 0em;
+			font: 1.7em "Amble Bold", Tahoma, Sans-Serif; 
+			padding: 0.2em 0 0em;
 		}
 		
 		h2 {
-			font: 1em "Amble", Courier, Sans-serif; 
+			font: 1em "Amble", Tahoma, Sans-serif; 
 			padding: 0 0 1em;
 			font-weight:normal;
 		}
@@ -87,10 +88,6 @@
 		a:hover {
 			color:#999;
 		}
-		
-		.front-page-projects {
-			font-family: "Amble LC", Courier, Serif;  
-		}
 
 		img.source-image {
 			width: 100%;
@@ -100,27 +97,30 @@
 			z-index: -2;
 		}
 		
-		#head-runner{
-		padding-left:2em;
-		background: rgba(10,33,64,1);
-		background: -moz-linear-gradient(top, rgba(10,33,64,1) 0%, rgba(7,18,179,1) 100%);
-		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(10,33,64,1)), color-stop(100%, rgba(7,18,179,1)));
-		background: -webkit-linear-gradient(top, rgba(10,33,64,1) 0%, rgba(7,18,179,1) 100%);
-		background: -o-linear-gradient(top, rgba(10,33,64,1) 0%, rgba(7,18,179,1) 100%);
-		background: -ms-linear-gradient(top, rgba(10,33,64,1) 0%, rgba(7,18,179,1) 100%);
-		background: linear-gradient(to bottom, rgba(10,33,64,1) 0%, rgba(7,18,179,1) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2140', endColorstr='#0712b3', GradientType=0 );
-		border-bottom: 4px solid #222;
-		border-top: 4px solid #222;
+		#header {
+			margin-top: 4em;
+			padding: 0;
+			width:100%;
+			
 		}
 		
-		#head-runner-links{
+		#header-name{
+		padding: 0;
+		margin:0;
+		clear:both;
+		color: #444;
+		}
+		
+		#header-links{
+			text-align: right;
+		}
+		
+		#header-links-box {
+			border-bottom: 1px solid black;
 			text-align: center;
-			background: #124;
-			padding: 0.3em;
-			border-bottom: 2px solid #222;
+			width: 40%;
+			float: right;
 		}
-		
 		
 		#site-description {
 			visibility:hidden;
@@ -140,15 +140,14 @@
 		}
 		
 		p { 
-			font: 1em/1.5 "Amble Light", Courier, Serif; 
+			font: 1em/1.5 "Amble Light", Tahoma, Serif; 
 			margin: 0 0 25px 0;  
 		}
 		
 		
 		.headlinks{
-			margin: 0 3%;
+			margin: 0 5%;
 			padding: 0 0.5em;
-			color: white;
 			font-weight:bold;
 			text-decoration: none;
 		}
@@ -162,24 +161,43 @@
 		#content {
 			margin: 0 auto;
 			margin-bottom:3em;
-			-moz-box-shadow: 0 0 50px black; 
-			-webkit-box-shadow: 0 0 50px black; 
-			box-shadow: 0 0 50px black; 
-			width: 90%;
 			background: #fffefd;
-		}
-		#content div {
-			padding: 1em 5%;
+			width: 90%;
+			
 		}
 		
 		#bio {
-			background: #fffefd;
 			overflow: hidden;
 		}
 		
+		.content-div {
+		
+			padding: 1em 5%;
+			margin-top: 1em;
+			margin-bottom: 2em;
+			
+			-moz-box-shadow: 0 0 20px black; 
+			-webkit-box-shadow: 0 0 20px black; 
+			box-shadow: 0 0 20px black; 
+		
+			background: rgba(230,230,230,1);
+			background: -moz-linear-gradient(top, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(230,230,230,1)), color-stop(100%, rgba(255,255,255,1)));
+			background: -webkit-linear-gradient(top, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+			background: -o-linear-gradient(top, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+			background: -ms-linear-gradient(top, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+			background: linear-gradient(to bottom, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2140', endColorstr='#0712b3', GradientType=0 );
+			
+			border: 2px outset #ddd;
+		}
+		
 		#profile-picture {
-			width:25%;
-			min-width: 200px;
+		
+			padding: 1em 5%;
+			width:200px;
+			height: 100%;
+			max-width: 100%;
 			float:left;
 			text-align:center;
 		}
@@ -190,45 +208,38 @@
 		}
 		
 		#bio-box {
-			margin-left: 22%;
+			margin-left: 25%;
 		}
 		
 		h3 {
-			font: 1.3em/2 "Amble Bold", Courier, Sans-serif; 
+			font: 1.3em/2 "Amble Bold", Tahoma, Sans-serif; 
 			text-align:center;
+			border-bottom: 1px solid black;
 		}
 		
 		#bio-box h3 {
 			text-align:left;
+			border-bottom:none;
+		}
+		
+		p.edu {
+			margin:0;
+			margin-left: 12%;
+			font-family: "Amble", Sans-serif;
 		}
 		
 		h4 {
-			font: 1.3em/2 "Amble LCI", Courier, Sans-serif; 
+			font: 1.3em/2 "Amble LCI", Tahoma, Sans-serif; 
 			text-align:center;
 		}
 		
-		h5 {
-			text-align: center;
-			font: 1.4em "Amble Bold", Courier, Sans-serif; 
-			font-style:italic;
-			background: #fff;
-			padding: 0.2em;
-			border: 1px solid black;
-		}
-		
 		#Publications {
-			background: #99f;
 			margin-top:1em;
 			overflow: hidden;
-			border-top: 0.2em double #66a;
-			border-bottom: 0.2em double #66a;
 		}
 		
 		#Data {
 			margin-top:1em;
-			border-top: 0.2em double #a53;
-			border-bottom: 0.2em double #a53;
-			background: #fca;
 			overflow: hidden;
 		}
 		
@@ -240,23 +251,22 @@
 			position: relative;
 			overflow: hidden;
 			height: 30em;
-			width: 90%;
+			width: 100%;
 			border: 0.3em groove #a53;
 		}
 		
 		#publist {
-			width: 90%;
+			width: 100%;
 			margin: 0;
-			padding: 0;
 			background: #fdfdfd;
 			border: 0.3em ridge #a53;
 		}
 		
 		.publist {
+			padding: 1em 5%;
 			border-bottom: 1px solid #ddd;
 			width: 90%;
 			margin: 0;
-			padding: 0;
 		}
 		
 		.publist p {
@@ -266,64 +276,98 @@
 		}
 		
 		p.pub-title {
-			font: 1.1em "Amble Bold", Courier, Sans-serif; 
+			font: 1.1em "Amble Bold", Tahoma, Sans-serif; 
 		}
 		
 		p.pub-author {
-			font: 1em "Amble", Courier, Sans-serif; 
+			font: 1em "Amble", Tahoma, Sans-serif; 
 			clear: right;
 		}
 		
 		
 		span.pub-year {
-			font: 0.9em "Amble LCI", Courier, Sans-serif; 
+			font: 0.9em "Amble LCI", Tahoma, Sans-serif; 
 		}
 		
 		span.pub-doi {
 			float:right;
-			font: 1em/2 "Amble", Courier, Sans-serif; 
+			font: 1em/2 "Amble", Tahoma, Sans-serif; 
 		}
 		
 		span.pub-journal {
-			font: 1em/2 "Amble LCI", Courier, Sans-serif; 
+			font: 1em/2 "Amble LCI", Tahoma, Sans-serif; 
 			margin-right: 0.5em;
+		}
+		
+		#logosvg {
+			height:65px;
+			width: 65px;
+			position: absolute;
+			display: inline;
+		}
+
+		#header h1,h2{
+			margin-left: 80px;
 		}
 		
 	</style>
 	</head>
 
 	<body>
-		<div id="head-runner">
-			<h1 style="color:white;">Jacob A. Richardson</h1>
-			<h2 style="color:white;">Planetary Volcanologist - NASA Goddard Space Flight Center</h2>
-		</div>
-		<div id="head-runner-links">
-			<a class="headlinks" href="#bio" >CV</a>
-			<a class="headlinks" href="#Data" >Data</a>
-			<a class="headlinks" href="#Publications" >Publications</a>
-		</div>
 		
 		<div id="content" >
-			<div id="bio">
+			<div id="header">
+			<div id="header-links">
+				<div id="header-links-box">
+					<a class="headlinks" href="#bio" >CV</a>
+					<a class="headlinks" href="#Data" >Data</a>
+					<a class="headlinks" href="#Publications" >Publications</a>
+				</div>
+			</div>
+			
+			<div id="header-name">
+				<div id="logosvg">
+					<svg>
+						<path id="arc1" fill="#eee"/>
+						<path id="arc2" fill="gray"/>
+						<path id="arc3" fill="gray" />
+						<path id="arc4" fill="#f5f5f5" />
+					</svg>
+				</div>
+				<div id="header-byline">
+					<h1>Jacob A. Richardson</h1>
+					<h2>Planetary Volcanologist</h2>
+				</div>
+			</div>
+			</div>
+			
+			<div id="bio" class="content-div">
 				<div id="profile-picture">
 					<a href="images/profile_jacob-richardson.png" title="photo credit: Anita Marshall"><img src="images/profile_jacob-richardson_sm.png" alt="Image of Jacob Richardson" /></a>
 				</div>
 				<div id="bio-box">
-					<h5>How do volcanic terrains and magmatic processes evolve over geologic time?</h5>
 					<h3>Bio</h3>
-					<p>Jacob Richardson is a volcanologist.<p>
-					
+					<p class="edu">Jacob Richardson is a volcanologist who researches how volcanic terrains and magmatic processes evolve over geologic time. His study areas include volcanic regions on Earth and its neighboring bodies, Mars, Venus, and the Moon. Much of his work involves mapping, numerical modeling of lava flows, and statistical modeling.</p>
+					<h3>Education</h3>
+					<p class="edu">Ph.D., 2016, School of Geosciences, University of South Florida</p>
+					<p class="edu">B.Sc., 2010, Department of Geography and Geology, Eastern Michigan University</p>
+					<h3>Professional Appointments</h3>
+					<p class="edu">2016-present, NASA Postdoctoral Fellow, NASA Goddard Space Flight Center/Universities Space Research Association</p>
+					<p class="edu">2013-6, Research Assistant, University of South Florida</p>
+					<h3>Curriculum Vitae</h3>
+					<p class="edu"><a href="#">Full CV</a> (pdf)</p>
+					<p class="edu"><a href="#">1-page CV</a> (pdf)</p>
 				</div>
 			</div>
 			
-		<div id="Data">
+		<div id="Data" class="content-div">
 			<h3>Publications &amp; Data</h3>
 			<h4>Earth</h4>
 			<div id="mapEarth" class="datamap"></div>
 			<h4>Mars</h4>
 			<div id="mapMars" class="datamap"></div>
 			
-			<h4>Peer-reviewed Publications</h4>
+			<h4 id="Publications">Peer-reviewed Publications</h4>
 			
 			<div id="publist">
 				<!--<div class="publist">
@@ -403,7 +447,7 @@
 			</div>
 			
 			
-			<div id="Publications">
+			<div id="Models" class="content-div">
 				<h3>Models</h3>
 				<p>&ndash; MOLASSES is a Cellular Automata lava flow simulator: <a class="front-page-projects" href="https://github.com/jarichardson/molasses">GitHub link</a>.</p>
 				<p>&ndash; A Python Code to evaluate spherical harmonic coefficients is <a class="front-page-projects" href="https://github.com/jarichardson/sph_harmonics">up on GitHub</a>.</p>
