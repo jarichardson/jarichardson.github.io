@@ -318,6 +318,7 @@
 		}
 		
 		.printblog a {
+			float: left;
 			margin: 1em;
 			padding:0.5em;
 			background-color:#fb8;
@@ -339,9 +340,9 @@
 			border:2px solid #777;
 		}
 		
-		.printPics img:hover {
-			height: 450px;
-		}
+		'.printPics img:hover {
+		'	height: 450px;
+		'}
 		
 		a.PrintModelLink:hover div {
 			background-color:#777;
