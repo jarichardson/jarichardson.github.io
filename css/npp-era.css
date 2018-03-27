@@ -347,7 +347,7 @@
 			margin: 1em 5%;
 		}
 		
-		.printblog a {
+		#modelDownload {
 			float: left;
 			margin: 1em;
 			padding:0.5em;

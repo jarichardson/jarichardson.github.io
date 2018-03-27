@@ -32,7 +32,7 @@ function hideModel() {
 			switch(mod) {
 				case 'TL':
 					var stlname = 'APOLLO17-region.stl';
-					var imgsrc = 'images/3Dmodels/pic_taurus_littrow.png';
+					var imgsrc = 'images/3Dmodels/pic_taurus_littrow.jpg';
 					var modelTitle = 'Apollo 17 region';
 					var descrip = 'This is a zoom-out of the Apollo 17 Landing Site, the adjacent topography.';
 					var geog = 'Roughly 6 km x 10 km';
@@ -42,7 +42,7 @@ function hideModel() {
 				
 				case 'Ina':
 					var stlname = 'InaD-5ve.stl';
-					var imgsrc = 'images/3Dmodels/pic_inaD.png';
+					var imgsrc = 'images/3Dmodels/pic_inaD.jpg';
 					var modelTitle = 'Ina D';
 					var descrip = 'Ina D is the largest of the Irregular Mare Patches on the Moon and it is famously difficult to see in orthographic photos because the high-standing blobs of material look like they are depressions.';
 					var geog = 'Roughly 3 km wide';
@@ -102,7 +102,7 @@ function hideModel() {
 				
 				case 'a17':
 					var stlname = 'APOLLO17.stl'
-					var imgsrc = 'images/3Dmodels/apollo/a17_modelview.png';
+					var imgsrc = 'images/3Dmodels/pic_taurus_littrow.jpg';
 					var modelTitle = 'Apollo 17';
 					var descrip = 'The LM landed near the cluster of small craters in the center of Taurus-Littrow Valley. The valley extendes from the South Massif in the close corner to the North Massif and the large Sculptured Hills in the far corner. The Lee-Lincoln Scarp is seen in this model connecting the North and South Massifs.';
 					var geog = '5.8 km x 5 km centered on the landing site';
@@ -113,11 +113,12 @@ function hideModel() {
 			
 			document.getElementById("modelTitle").innerHTML = modelTitle;
 			document.getElementById("modelPic").src=imgsrc;
+			document.getElementById("modelDownload").innerHTML = 'Download '+stlname;
 			document.getElementById("modelDownload").href="https://github.com/jarichardson/jarichardson.github.io/raw/master/stls/"+stlname;
 			document.getElementById("STLViewer").innerHTML = iframe1+stlname+iframe2+stlname+iframe3;
 			//if it's a geographic model, give an indication of geographic extence, vertical exag, and data source.
 			if (demmodel === true) {
-				document.getElementById("modelAbout").innerHTML = '<p class="LBp">'+descrip+'</p><p class="LBp">Geographic Extent:'+geog+'</p><p class="LBp">Vertical Exagerration:'+ve+'</p><p class="LBp">Data Source:'+datasrc+'</p>';
+				document.getElementById("modelAbout").innerHTML = '<p class="LBp">'+descrip+'</p><p class="LBp"><strong>Geographic Extent:</strong> '+geog+'</p><p class="LBp"><strong>Vertical Exagerration:</strong> '+ve+'</p><p class="LBp"><strong>Data Source:</strong> '+datasrc+'</p>';
 			} else {
 				document.getElementById("modelAbout").innerHTML = '<p class="LBp">'+descrip+'</p>';
 			}
