@@ -10,19 +10,31 @@
 	
 	
 	<script src="js/logo.js"></script>
+	<script src="js/ModelLightBox.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="css/npp-era.css">
 	
 	
 	<style>
 	
-	.modelbackground {
+	#modelWrapper {
 		position: absolute;
 		left: 0px;
 		top: 0px;
 		width:99%;
 		background-image: url(images/background_50black.png);
 		z-index: 1;
+	}
+	
+	#modelClose {
+		float:right;
+	}
+	
+	#modelClose a {
+		text-decoration: none;
+		font-family: sans-serif;
+		font-weight:bold;
+		font-size:1.5em;
 	}
 	
 	.modelpopup {
@@ -39,7 +51,7 @@
 	  z-index: 2;
 	}
 	
-	#Print-Ina{
+	#PrintLB{
 		display: none;
 		margin-bottom: 5em;
 	}
@@ -79,30 +91,25 @@
 				</div>
 			</div>
 			</div>
-		<div id="modelwrapper" class="modelbackground" onclick="hideIna()">
+			
+			
+		<div id="modelWrapper" onclick="hideModel();">
 			<div class="modelpopup"> 
-				<div class="modelpopupinner" id="Print-Ina">
+				<div class="modelpopupinner" id="PrintLB">
 					<div  class="LBcontent-div">
-						<h3 class="LBp">Ina D, the Moon</h3>
+						<span id="modelClose"><a href=''>X</a></span>
+						<h3 class="LBp" id="modelTitle"></h3>
 						<div class="printblog">
-							<img src="images/3Dmodels/pic_inaD.jpg" class="LBimg" />
-							<p class="LBp">Ina D is the largest of the Irregular Mare Patches on the Moon and it is famously difficult to see in orthographic photos because the high-standing blobs of material look like they are depressions.</p>
-							<p class="LBp">I used a NAC DTM to make a 5x vertical exaggeration model of Ina D. Meshlab converted the resulting OBJ file to an STL for MatterControl to print. This model was printed vertically on a raft with east facing down.</p>
-							<a class="LBa" href="https://github.com/jarichardson/jarichardson.github.io/raw/master/stls/InaD-5ve.stl">Download the .STL</a>
-							<div id="STLViewer">
-							<!--<script src="https://embed.github.com/view/3d/jarichardson/jarichardson.github.io/master/stls/InaD-5ve.stl?height=500&width=500" class="modelViewer"></script>-->
-							<iframe height="500" width="500" frameborder="0" src="https://render.githubusercontent.com/view/3d?url=https://raw.githubusercontent.com/jarichardson/jarichardson.github.io/master/stls/InaD-5ve.stl" title="InaD-5ve.stl"></iframe>
-							</div>
-						</div>
-						<div class="printPics" >
-							<img class="LBimg" src="images/3Dmodels/3d-ina-model.jpg" />
-							<img class="LBimg" src="images/3Dmodels/3d-ina-inprog.jpg" />
-							<img class="LBimg" src="images/3Dmodels/3d-ina-real.jpg" />
+							<img src="#" class="LBimg" id="modelPic" />
+							<div class="LBp" id="modelAbout"></div>
+							<a class="LBa" id="modelDownload" href="#">Download the .STL</a>
+							<div id="STLViewer"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
+		
 		
 		<div id="ThreeDee-desc" class="content-div">
 			<h3>3D Printing</h3>
@@ -111,11 +118,11 @@
 		
 		<div id="3D-Library" class="content-div">
 			<h3>Models</h3>
-			<a class="PrintModelLink" href="#Print-Ina" onclick="showIna()"><div class="PrintModel" >
+			<a class="PrintModelLink" href="#Print-Ina" onclick="showModel('Ina');"><div class="PrintModel" >
 				<p>Ina D, Moon</p>
 				<img src="images/3Dmodels/3d-ina-model.jpg" />
 			</div></a>
-			<a class="PrintModelLink" href="#Print-Taurus_Littrow" ><!--onclick="showInaTL()"--><div class="PrintModel" >
+			<a class="PrintModelLink" href="#Print-Ina" onclick="showModel('TL');" ><div class="PrintModel" >
 				<p>Apollo 17 Landing Site</p>
 				<img src="images/3Dmodels/3d-taurus_littrow-model.jpg" />
 			</div></a>
@@ -138,7 +145,6 @@
 				<img src="images/3Dmodels/3d-ina-real.jpg" />
 			</div>
 		</div>
-		-->
 		<div id="Print-Taurus_Littrow" class="content-div">
 			<h3>Apollo 17 Landing Site: Taurus Littrow</h3>
 			<div class="printblog">
@@ -148,42 +154,22 @@
 				
 				<a href="https://github.com/jarichardson/jarichardson.github.io/raw/master/stls/apollo17.stl">Download the .STL</a>
 				<script src="https://embed.github.com/view/3d/jarichardson/jarichardson.github.io/master/stls/apollo17.stl?height=500&width=500" class="modelViewer"></script>
-				<!--<script src="https://embed.github.com/view/3d/skalnik/secret-bear-clip/master/stl/clip.stl"></script>-->
 			</div>
 			<div class="printPics" >
 				<img src="images/3Dmodels/3d-taurus_littrow-model.jpg" />
 				<img src="images/3Dmodels/3d-taurus_littrow-realfun.jpg" />
 			</div>
 		</div>
+		-->
 
 		
 			<div id="footer">
-				<p>Created and copyright 2017 by Jacob</p>
+				<p>Created and copyright 2018 by Jacob</p>
 			</div>
 		
 		
 	
-		<script>
-		function showIna() {
-			var x = document.getElementById("Print-Ina");
-			x.style.display = "block";
-		}
-		function hideIna() {
-			var x = document.getElementById("Print-Ina");
-			var noRedirect = '.LBcontent-div, .printPics, .printblog, .LBimg, .LBa, .LBp, LBcontent-div h3';
-			if (!event.target.matches(noRedirect)) {
-			//if (event.target.id !== "Print-Ina") {
-				x.style.display = "none";
-			}
-		}
-		function showInaTL() { 
-			var x = document.getElementById("Print-Ina");
-			document.getElementById("STLViewer").innerHTML = '<iframe height="500" width="500" frameborder="0" src="https://render.githubusercontent.com/view/3d?url=https://raw.githubusercontent.com/jarichardson/jarichardson.github.io/master/stls/apollo17.stl" title="InaD-5ve.stl"></iframe>';
-			
-			x.style.display = "block";
-		}
-		
-		</script>
+
 
 	</body>
 
