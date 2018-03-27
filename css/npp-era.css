@@ -81,15 +81,18 @@
 		color: #444;
 		}
 		
-		#header-links{
+		#header-links {
 			text-align: right;
+			font: 1em/2 "Amble", Tahoma, Sans-serif; 			
 		}
+		
 		
 		#header-links-box {
 			border-bottom: 1px solid black;
 			text-align: center;
 			width: 40%;			
 			float: right;
+			font: 1em/2 "Amble", Tahoma, Sans-serif;
 		}
 		
 		#site-description {
