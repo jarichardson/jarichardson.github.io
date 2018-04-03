@@ -109,6 +109,17 @@ function hideModel() {
 					var ve = '3x';
 					var datasrc = '<a href="http://wms.lroc.asu.edu/lroc/view_rdr/NAC_DTM_APOLLO17">LROC NAC DTM</a>';
 				break;
+				
+				case 'ori':
+					var stlname = 'OrientaleCrust.stl'
+					var imgsrc = 'images/3Dmodels/pic_Mare_Orientale.png';
+					var modelTitle = 'Orientale Crust Model';
+					var descrip = 'This model shows the crust under Mare Orientale, a large basin on the Moon. The surface that we see from space is created using laser altimeter data (LOLA). The bottom of the crust is a model created from gravity data from the GRAIL mission. The striking feature of this model is the thin crust center, where the mantle rises to within a few km of the surface. The base of the model is the lunar equator and the basin is in the Southern Hemisphere so the model might be considered to be "upside-down".';
+					var geog = '0-40° S, 70-120° W, about 1,200 km in width';
+					var ve = '3x on both sides (6x thickness exag.)';
+					var datasrc = '<a href="http://dx.doi.org/10.1126/science.aag0519">Zuber et al. 2016</a>; Gregory Neumann';
+				break;
+				
 			}
 			
 			document.getElementById("modelTitle").innerHTML = modelTitle;
