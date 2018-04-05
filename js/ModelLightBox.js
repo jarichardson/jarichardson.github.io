@@ -84,7 +84,7 @@ function hideModel() {
 					var stlname = 'APOLLO15.stl'
 					var imgsrc = 'images/3Dmodels/pic_a15.gif';
 					var modelTitle = 'Apollo 15, Hadley-Apennine Region';
-					var descrip = 'The main feature at the boundary of the Apollo 15 study area is Hadley Rille, making a large valley. To the south the model ends at the slope of the Apennine Front. The LM landed in the north central area of this model.';
+					var descrip = 'The main feature at the boundary of the Apollo 15 study area is Hadley Rille, which is seen as a large valley in the model. To the south the model ends at the slope of the Apennine Front. The LM landed in the north central area of this model.';
 					var geog = '4.2 km x 6 km centered on the landing site';
 					var ve = '3x';
 					var datasrc = '<a href="http://wms.lroc.asu.edu/lroc/view_rdr/NAC_DTM_APOLLO15">LROC NAC DTM</a>';
@@ -129,7 +129,7 @@ function hideModel() {
 			document.getElementById("STLViewer").innerHTML = iframe1+stlname+iframe2+stlname+iframe3;
 			//if it's a geographic model, give an indication of geographic extence, vertical exag, and data source.
 			if (demmodel === true) {
-				document.getElementById("modelAbout").innerHTML = '<p class="LBp">'+descrip+'</p><p class="LBp"><strong>Geographic Extent:</strong> '+geog+'</p><p class="LBp"><strong>Vertical Exagerration:</strong> '+ve+'</p><p class="LBp"><strong>Data Source:</strong> '+datasrc+'</p>';
+				document.getElementById("modelAbout").innerHTML = '<p class="LBp">'+descrip+'</p><p class="LBp"><strong>Geographic Extent:</strong> '+geog+'</p><p class="LBp"><strong>Vertical Exaggeration:</strong> '+ve+'</p><p class="LBp"><strong>Data Source:</strong> '+datasrc+'</p>';
 			} else {
 				document.getElementById("modelAbout").innerHTML = '<p class="LBp">'+descrip+'</p>';
 			}
