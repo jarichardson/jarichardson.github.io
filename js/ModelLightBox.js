@@ -84,7 +84,7 @@ function hideModel() {
 					var stlname = 'APOLLO15.stl'
 					var imgsrc = 'images/3Dmodels/pic_a15.gif';
 					var modelTitle = 'Apollo 15, Hadley-Apennine Region';
-					var descrip = 'The main feature at the boundary of the Apollo 15 study area is Hadley Rille, which is seen as a large valley in the model. To the south the model ends at the slope of the Apennine Front. The LM landed in the north central area of this model.';
+					var descrip = 'The main feature at the boundary of the Apollo 15 study area is Hadley Rille, which is seen as a large valley. To the south the model ends at the slope of the Apennine Front. The LM landed in the north central area of this model.';
 					var geog = '4.2 km x 6 km centered on the landing site';
 					var ve = '3x';
 					var datasrc = '<a href="http://wms.lroc.asu.edu/lroc/view_rdr/NAC_DTM_APOLLO15">LROC NAC DTM</a>';
@@ -118,6 +118,16 @@ function hideModel() {
 					var geog = '0-40° S, 70-120° W, about 1,200 km in width';
 					var ve = '3x on both sides (6x thickness exag.)';
 					var datasrc = '<a href="http://dx.doi.org/10.1126/science.aag0519">Zuber et al. 2016</a>; Gregory Neumann';
+				break;
+				
+				case 'mos':
+					var stlname = 'MoscovienseCrust.stl'
+					var imgsrc = 'images/3Dmodels/pic_moscoviense.jpg';
+					var modelTitle = 'Moscoviense Crust Model';
+					var descrip = 'This model shows the crust under Mare Moscoviense, a basin on the Moon whose center might expose the lunar mantle. The surface that we see from space is created using laser altimeter data (LOLA). The bottom of the crust is a model created from gravity data from the GRAIL mission.';
+					var geog = '16-35° S, 135-160° E, about 650 km in width';
+					var ve = '3x on both sides (6x thickness exag.)';
+					var datasrc = 'LOLA and Gregory Neumann';
 				break;
 				
 			}
