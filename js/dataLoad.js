@@ -127,8 +127,18 @@ var features = [
 	'<p class="pub-author">Charbonnier, S., Connor, C., Connor, L., Sheridan, M., Oliva Hernández, J., <strong>Richardson, J.A.</strong></p>'+
 	'<span class="pub-journal">Bulletin of Volcanology</span>'+
 	'<span class="pub-year">2018</span>'+
-	'<span class="pub-doi"><a href="">https://doi.org/10.1007/s00445-017-1169-x</a></span>'
+	'<span class="pub-doi"><a href="https://doi.org/10.1007/s00445-017-1169-x">doi:10.1007/s00445-017-1169-x</a></span>'
+  }, {
+  	//INL, Gallant paper
+    position: new google.maps.LatLng(43.65, -112.75),
+    type: 'paper',
+    content: '<p class="pub-title">A new approach to probabilistic lava flow hazard assessments, applied to the Idaho National Laboratory, eastern Snake River Plain, Idaho, USA</p>'+
+	'<p class="pub-author">Gallant, E., <strong>Richardson, J.A.</strong>, Connor, C., Wetmore, P., Connor, L.</p>'+
+	'<span class="pub-journal">Geology</span>'+
+	'<span class="pub-year">2018</span>'+
+	'<span class="pub-doi"><a href="https://doi.org/10.1130/G45123.1">doi:10.1130/G45123.1</a></span>'
   }
+  
   /*, {
   	//nevado del ruiz abstract
   	position: new google.maps.LatLng(4.8920, -75.3188),
