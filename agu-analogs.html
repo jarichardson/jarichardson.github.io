@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="google-site-verification" content="lbluN2Ji00svb1JABC8r8FlxxSCUrPYHv8iREj20iDU" />
+	<meta type="description" content="Jacob Richardson is a planetary volcanology post-doctoral fellow at NASA Goddard Space Flight Center, studying volcanoes on Earth and other planets." />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+
+	<title>Jacob Richardson :: 3D Models</title>
+
+
+	<script src="js/logo.js"></script>
+	<script src="js/ModelLightBox.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/npp-era.css">
+
+
+	<style>
+
+	#modelWrapper {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width:99%;
+		background-image: url(images/background_50black.png);
+		z-index: 1;
+	}
+
+	#modelClose {
+		float:right;
+	}
+
+	#modelClose a {
+		text-decoration: none;
+		font-family: sans-serif;
+		font-weight:bold;
+		font-size:1.5em;
+	}
+
+	.modelpopup {
+	  position: relative;
+	  left: 50%;
+	  top: 2em;
+	  width:75%;
+	  z-index: 2;
+	}
+
+	.modelpopupinner {
+	  position: relative;
+	  left: -50%;
+	  z-index: 2;
+	}
+
+	#PrintLB{
+		display: none;
+		margin-bottom: 5em;
+	}
+	</style>
+
+	</head>
+
+
+	<body>
+
+		<div id="content" >
+			<div id="header">
+				<div id="header-links">
+					<div id="header-links-box">
+						<a class="headlinks" href="index.html">Bio &amp; Vitae</a>
+						<a class="headlinks" href="index.html#Pubs-n-Data">Publications</a>
+						<a class="headlinks" href="index.html#DataMaps">Data</a>
+						<a class="headlinks" href="index.html#Codes">Codes</a>
+						<a class="headlinks" href="3d-models.html" ><span style="display:inline-block;">3D Models</span></a>
+					</div><!--header-links-box-->
+				</div><!--header-links-->
+
+			<div id="header-name">
+				<div id="logosvg">
+				<a href="index.html" style="text-decoration:none;">
+					<svg>
+						<path id="arc1" fill="#eee"/>
+						<path id="arc2" fill="gray"/>
+						<path id="arc3" fill="gray" />
+						<path id="arc4" fill="#f5f5f5" />
+					</svg>
+				</a>
+				</div> <!--logosvg-->
+				<div id="header-byline">
+					<h1>Jacob A. Richardson</h1>
+					<h2>Planetary Volcanologist</h2>
+				</div> <!--header-byline-->
+
+			</div> <!--header-name-->
+			</div> <!--header-->
+
+
+
+		<div id="modelWrapper" onclick="hideModel();">
+			<div class="modelpopup">
+				<div class="modelpopupinner" id="PrintLB">
+					<div  class="LBcontent-div">
+						<span id="modelClose"><a href=''>X</a></span>
+						<h3 class="LBp" id="modelTitle"></h3>
+						<div class="printblog">
+							<img src="#" class="LBimg" id="modelPic" />
+							<div class="LBp" id="modelAbout"></div>
+							<a class="LBa" id="modelDownload" href="#">Download the .STL</a>
+							<div id="STLViewer"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="ThreeDee-desc" class="content-div">
+			<h3>Welcome!</h3>
+			<p>This is the Gathering Space for the Planetary Analogs Sessions of AGU. Is this your first time in a Gather Town Space? It is sort of like a Zoom call where you interact with folks nearby as you walk around like you are in a video game. Here's a few maps!</p>
+			<p><img src="images/agu_gater/Basemap.png" /></p>
+			<p>You can walk around this area with your arrow keys. When you are close to people, you will be able to interact with them like a Zoom call.</p>
+			<p><img src="images/agu_gater/PosterSpaceMap.png" /></p>
+			<p>When you are near a poster space, you can hear only people at the same poster space.</p>
+			<p><img src="images/agu_gater/PublicSpaceMap.png" /></p>
+			<p>When you are in the public areas, you can hear and speak to anyone near you!</p>
+		</div>
+
+
+
+			<div id="footer">
+				<p>Created and copyright 2020 by Jacob</p>
+			</div>
+
+
+
+
+
+	</body>
+
+</html>
